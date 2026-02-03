@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<style>
+			body { font-family:Calibri; font-size:12pt }
+			p { margin:0pt }
+@media (max-width: 900px) { 
+img { 
+   max-width: 100%;
+   height: auto;
+}
+
+.table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+}	
+
+
+		</style>
+	</head>
+	<body>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&lt;!DOCTYPE html&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&lt;html lang="en"&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&lt;head&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0; </span><span style="font-family:HelveticaNeue">&lt;meta charset="UTF-8" /&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0; </span><span style="font-family:HelveticaNeue">&lt;meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" /&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0; </span><span style="font-family:HelveticaNeue">&lt;title&gt;Will you be my Valentine?&lt;/title&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0; </span><span style="font-family:HelveticaNeue">&lt;!-- Confetti library --&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0; </span><span style="font-family:HelveticaNeue">&lt;script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"&gt;&lt;/script&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0; </span><span style="font-family:HelveticaNeue">&lt;style&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">:root {</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">--bg1: #ffd6e7;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">--bg2: #ffeef6;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">--card: #ffffffcc;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">--yes: #ff3b7a;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">--yesHover: #ff1f68;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">}</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">* { box-sizing: border-box; }</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">body {</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">margin: 0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">min-height: 100svh;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">display: grid;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">place-items: center;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">background: radial-gradient(circle at top, var(--bg2), var(--bg1));</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">font-family: system-ui, sans-serif;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">overflow: hidden;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">padding: 16px;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">}</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">/* FULL-SCREEN CONFETTI CANVAS */</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">#confettiCanvas {</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">position: fixed;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">inset: 0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">width: 100vw;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">height: 100vh;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">pointer-events: none;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">z-index: 9999;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">}</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">.card {</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">width: min(720px, 92vw);</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">padding: 26px 22px;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">background: var(--card);</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">backdrop-filter: blur(10px);</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">border-radius: 22px;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">text-align: center;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">box-shadow: 0 18px 60px rgba(0,0,0,.15);</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">}</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">.art {</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">width: min(260px, 80vw);</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">margin: 0 auto 10px;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">display: block;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">filter: drop-shadow(0 10px 14px rgba(0,0,0,.12));</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">}</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">h1 {</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">font-size: clamp(26px, 4vw, 44px);</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">margin: 12px 0 18px;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">}</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">.button-zone {</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">position: relative;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">width: min(520px, 92%);</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">height: 150px;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">margin: 0 auto;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">touch-action: none;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">}</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">button {</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">position: absolute;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">top: 50%;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">transform: translateY(-50%);</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">padding: 16px 24px;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">font-size: 18px;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">font-weight: 800;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">border-radius: 999px;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">border: none;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">cursor: pointer;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">box-shadow: 0 10px 24px rgba(0,0,0,.14);</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">user-select: none;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">-webkit-tap-highlight-color: transparent;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">transition: transform .12s ease, background .12s ease;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">}</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">#yesBtn {</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">left: 18%;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">background: var(--yes);</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">color: #fff;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">}</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">#yesBtn:hover { background: var(--yesHover); }</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">#noBtn {</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">left: 62%;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">background: #e5e7eb;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">color: #111827;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">}</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">.hint {</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">margin-top: 10px;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">font-size: 13px;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">opacity: .7;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">}</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">.result {</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">display: none;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">margin-top: 18px;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">animation: pop .35s ease;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">}</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">.result h2 {</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">font-size: clamp(30px, 4.5vw, 46px);</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">margin: 10px 0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">}</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">.fireworks {</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">width: min(380px, 90vw);</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">margin: 0 auto;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">display: block;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">}</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">@keyframes pop {</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">from { transform: scale(.96); opacity: 0; }</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">to { transform: scale(1); opacity: 1; }</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">}</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0; </span><span style="font-family:HelveticaNeue">&lt;/style&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&lt;/head&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&lt;body&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0; </span><span style="font-family:HelveticaNeue">&lt;canvas id="confettiCanvas"&gt;&lt;/canvas&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0; </span><span style="font-family:HelveticaNeue">&lt;main class="card"&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;!-- ANIMAL WITH HEART --&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;svg class="art" viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg"&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;defs&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;linearGradient id="fur" x1="0" x2="1"&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;stop offset="0" stop-color="#f7c7a1"/&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;stop offset="1" stop-color="#f2a97b"/&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;/linearGradient&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;linearGradient id="heart" x1="0" x2="1"&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;stop offset="0" stop-color="#ff4d7d"/&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;stop offset="1" stop-color="#ff1f68"/&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;/linearGradient&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;/defs&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;path d="M250 50 C250 33 270 25 282 38</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">C294 25 314 33 314 50</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">C314 78 282 92 282 106</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">C282 92 250 78 250 50Z"</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">fill="url(#heart)"/&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;path d="M90 120 C90 70 140 40 190 60</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">C240 40 290 70 290 120</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">C290 180 240 210 190 210</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">C140 210 90 180 90 120Z"</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">fill="url(#fur)"/&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;path d="M110 92 L95 55 L140 78 Z" fill="#f2a97b"/&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;path d="M270 92 L285 55 L240 78 Z" fill="#f2a97b"/&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;circle cx="160" cy="130" r="8"/&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;circle cx="220" cy="130" r="8"/&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;path d="M190 144 C186 144 182 148 182 152</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">C182 160 190 164 190 170</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">C190 164 198 160 198 152</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">C198 148 194 144 190 144Z"</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">fill="#ff7aa2"/&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;/svg&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;h1&gt;Baby Diyang will you be my valentine?&lt;/h1&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;section class="button-zone" id="zone"&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;button id="yesBtn"&gt;Yes&lt;/button&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;button id="noBtn"&gt;No&lt;/button&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;/section&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;!-- HINT --&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;div class="hint" id="hint"&gt;“No” seems a bit shy </span><span style="font-family:'Segoe UI Emoji'">😈</span><span style="font-family:HelveticaNeue">&lt;/div&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;section class="result" id="result"&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;h2&gt;YAY! 🎉&lt;/h2&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;img</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">class="fireworks"</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">src="https://media.giphy.com/media/26ufdipQqU2lhNA4g/giphy.gif"</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">alt="Fireworks"</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">/&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">&lt;/section&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0; </span><span style="font-family:HelveticaNeue">&lt;/main&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0; </span><span style="font-family:HelveticaNeue">&lt;script&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">const zone = document.getElementById("zone");</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">const yesBtn = document.getElementById("yesBtn");</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">const noBtn = document.getElementById("noBtn");</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">const result = document.getElementById("result");</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">const hint = document.getElementById("hint");</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">/* ---------- CONFETTI ---------- */</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">const confettiCanvas = document.getElementById("confettiCanvas");</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">function resizeConfettiCanvas() {</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">const dpr = Math.max(1, window.devicePixelRatio || 1);</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">confettiCanvas.width = Math.floor(window.innerWidth * dpr);</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">confettiCanvas.height = Math.floor(window.innerHeight * dpr);</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">confettiCanvas.style.width = "100vw";</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">confettiCanvas.style.height = "100vh";</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">}</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">resizeConfettiCanvas();</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">window.addEventListener("resize", resizeConfettiCanvas);</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">window.addEventListener("orientationchange", () =&gt; setTimeout(resizeConfettiCanvas, 150));</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">const confettiInstance = confetti.create(confettiCanvas, {</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">resize: false,</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">useWorker: true</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">});</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">function fullScreenConfetti() {</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">const end = Date.now() + 1600;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">(function frame() {</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">confettiInstance({</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">particleCount: 12,</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">spread: 90,</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">startVelocity: 45,</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">ticks: 180,</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">origin: { x: Math.random(), y: Math.random() * 0.3 }</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">});</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">if (Date.now() &lt; end) requestAnimationFrame(frame);</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">})();</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">setTimeout(() =&gt; {</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">confettiInstance({</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">particleCount: 300,</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">spread: 140,</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">startVelocity: 60,</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">ticks: 220,</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">origin: { x: 0.5, y: 0.55 }</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">});</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">}, 300);</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">}</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">/* ---------- YES BUTTON GROWS ---------- */</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">let yesScale = 1;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">function growYes() {</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">yesScale = Math.min(2.2, yesScale + 0.1);</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">yesBtn.style.transform = `translateY(-50%) scale(${yesScale})`;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">}</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">/* ---------- NO BUTTON RUNS AWAY ---------- */</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">function clamp(n, min, max) {</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">return Math.max(min, Math.min(max, n));</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">}</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">function moveNo(px, py) {</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">const z = zone.getBoundingClientRect();</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">const b = noBtn.getBoundingClientRect();</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">let dx = (b.left + b.width / 2) - px;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">let dy = (b.top + b.height / 2) - py;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">let mag = Math.hypot(dx, dy) || 1;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">dx /= mag;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">dy /= mag;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">let newLeft = (b.left - z.left) + dx * 150;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">let newTop</span><span style="font-family:HelveticaNeue">&#xa0; </span><span style="font-family:HelveticaNeue">= (b.top - z.top) + dy * 150;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">newLeft = clamp(newLeft, 0, z.width - b.width);</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">newTop</span><span style="font-family:HelveticaNeue">&#xa0; </span><span style="font-family:HelveticaNeue">= clamp(newTop, 0, z.height - b.height);</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">noBtn.style.left = newLeft + "px";</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">noBtn.style.top = newTop + "px";</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">noBtn.style.transform = "none";</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">growYes();</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">}</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">zone.addEventListener("pointermove", e =&gt; {</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">const b = noBtn.getBoundingClientRect();</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">const d = Math.hypot(</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">(b.left + b.width / 2) - e.clientX,</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">(b.top + b.height / 2) - e.clientY</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">);</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">if (d &lt; 140) moveNo(e.clientX, e.clientY);</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">});</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">noBtn.addEventListener("click", e =&gt; e.preventDefault());</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">/* ---------- YES CLICK ---------- */</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">yesBtn.addEventListener("click", () =&gt; {</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">zone.style.display = "none";</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">hint.style.display = "none";</span><span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">// HIDE THE HINT</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">result.style.display = "block";</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">resizeConfettiCanvas();</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">fullScreenConfetti();</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0;&#xa0;&#xa0; </span><span style="font-family:HelveticaNeue">});</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&#xa0; </span><span style="font-family:HelveticaNeue">&lt;/script&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&lt;/body&gt;</span>
+			</p>
+			<p style="widows:0; orphans:0; font-size:13pt">
+				<span style="font-family:HelveticaNeue">&lt;/html&gt;</span>
+			</p>
+	<p style="bottom: 10px; right: 10px; position: absolute;"><a href="https://wordtohtml.net/?utm_source=wth_free_doc_conversion_link&utm_medium=external" target="_blank" style="font-size:11px; color: #d0d0d0">Converted to HTML with WordToHTML.net</a><span style="font-size:11px; color: #d0d0d0"> | </span><a href="https://documentconverter.pro/?utm_source=wth_free_doc_conversion_link&utm_medium=external" target="_blank" style="font-size:11px; color: #d0d0d0">Document Converter for Windows</a></p>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"4581d6a58cf94e929fad52deda295622","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
